@@ -1,16 +1,10 @@
 #!/bin/bash
-# A simple script to calculate Simple Interest
+echo "Enter Principal:"
+read p
+echo "Enter Rate:"
+read r
+echo "Enter Time:"
+read t
 
-echo "Enter Principal Amount:"
-read principal
-
-echo "Enter Rate of Interest (in %):"
-read rate
-
-echo "Enter Time (in years):"
-read time
-
-# Calculate simple interest
-interest=$(echo "scale=2; $principal * $rate * $time / 100" | bc)
-
-echo "Simple Interest is: ₹$interest"
+si=$(echo "scale=2; ($p * $r * $t) / 100" | bc)
+echo "Simple Interest: $si"
